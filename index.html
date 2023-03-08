@@ -13,7 +13,11 @@
 <body>
     <div class="modal is-hidden" data-modal>
         <div class="inner-div">
-            <button data-modal-close>Close</button>
+            <button class="modal-close-button-position" data-modal-close>
+                <svg class="modal-close-button">
+                    <use href="images/icons-svg.svg#icon-Vector-2"></use>
+                </svg>
+            </button>
             <!-- <p>text text</p> -->
         </div>
     </div>
@@ -23,9 +27,9 @@
             <a class="link header-logo" href="index.html"><span class="span-for-logo">Web</span>Studio</a>
             <nav class="header-navigation">
                 <ul class="navigation-list unstyled-list">
-                    <li class="nav-list-item"><a class="link" href="index.html">Studio</a></li>
-                    <li class="nav-list-item"><a class="link" href="Portfolio.html">Portfolio</a></li>
-                    <li class="nav-list-item"><a class="link" href="Contacts.html">Contacts</a></li>
+                    <li class="nav-list-item"><a class="link navigation-link active-link" href="index.html">Studio</a></li>
+                    <li class="nav-list-item"><a class="link navigation-link " href="Portfolio.html">Portfolio</a></li>
+                    <li class="nav-list-item"><a class="link navigation-link " href="Contacts.html">Contacts</a></li>
                 </ul>
             </nav>
             <!--RightNavigationSection-->
@@ -121,11 +125,26 @@
         <section class="container-for-dimensions padding-bottom-class">
             <h2 class="center-text">What we do</h2>
             <ul class="what-we-do-images unstyled-list">
-                <li><img height="294" width="370" src="images/what_we_do1.jpg" alt=""></li>
-                <li><img height="294" width="370" src="images/what_we_do2.jpg" alt=""></li>
-                <li><img height="294" width="370" src="images/what_we_do3.jpg" alt=""></li>
+              <li>
+                <div class="what-we-do-overlay">
+                  <img height="294" width="370" src="images/what_we_do1.jpg" alt="">
+                  <div class="overlay-text">DESKTOP APPS</div>
+                </div>
+              </li>
+              <li>
+                <div class="what-we-do-overlay">
+                  <img height="294" width="370" src="images/what_we_do2.jpg" alt="">
+                  <div class="overlay-text">Mobile APPS</div>
+                </div>
+              </li>
+              <li>
+                <div class="what-we-do-overlay">
+                  <img height="294" width="370" src="images/what_we_do3.jpg" alt="">
+                  <div class="overlay-text">DESIGN SOLUTIONS</div>
+                </div>
+              </li>
             </ul>
-        </section>
+          </section>
         <!--Our-team-Section-->
         <section class="container-for-dimensions">
             <h2 class="center-text">Our Team</h2>
