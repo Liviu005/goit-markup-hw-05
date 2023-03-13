@@ -231,6 +231,7 @@ body{
     border: 0;
     border-radius: 4px;
     padding: 6px 22px;
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .button-studio{
@@ -246,7 +247,7 @@ body{
     border: none;
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
     cursor: pointer;
-
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .button-list{
@@ -254,6 +255,10 @@ body{
     justify-content: center;
     gap: 8px;
     padding: 94px 0px 50px 0px;
+}
+
+.button-item-list{
+    
 }
 
 .container-list{
@@ -271,7 +276,6 @@ body{
     position: relative;
 }
 
-
 .container{
     height: 404px;
     background: #FFFFFF;
@@ -286,15 +290,8 @@ body{
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16)
 }
 
-.parent-overlay{
-    position: relative;
-    display: flex;
-    flex-direction: column;
-}
-
 .container-image {
     height: 404px;
-    /* weigth */
     display: block;
     position: relative;
     box-sizing: border-box;
@@ -302,21 +299,32 @@ body{
     position: relative;
 }
 
-.over{
+.overlay-portfolio{
     position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: rgba(33, 150, 243, 0.9);
+    background: rgba(0, 0, 255, 0.7);
     overflow: hidden;
     width: 100%;
-    height: 0;
-    transition: .5s ease
+    height:100%;
+    transform: translateY(100%);
+    transition: transform 250ms linear;
+    opacity: 0.9;
+    bottom: 0;
 }
+
+.container-image:hover .overlay-portfolio{
+    transform: translateY(0px)
+}
+
+.container-overlay-image-portfolio {
+    position: relative;
+    overflow: hidden;
+}
+
 .container-image:hover .over{
-    height: 100%;
+    transform: translateY(0px)
 }
-.tex{
+
+.overlay-text-portfolio{
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;
@@ -326,41 +334,6 @@ body{
     color: #FFFFFF;
     padding: 64px 24px 91px 24px;
 }
-
-.container-image:hover .overlay-portfolio {
-    opacity: 1;
-  }
-  
-  .overlay-portfolio {
-    position: absolute;
-    background-color: rgba(0, 0, 255, 0.7);
-    opacity: 0;
-    width: 100%;
-    height: 100%;
-  }
-
-  .overlay-text-portfolio {
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(0, 0, 255, 0.7);
-    opacity: 0;
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.parent-overlay:hover .container-image .overlay-text-portfolio {
-    opacity: 1;
-}
-
-.overlay-paragraph {
-    color: white;
-    font-size: 24px;
-    text-align: center;
-    padding: 20px;
-}
-
-
-
 
 .container-title {
     font-weight: 700;
@@ -560,7 +533,7 @@ body{
   
   .image-overlay {
     position: relative;
-    display: inline-block;
+    
   }
   
   .overlay-text-studio {
